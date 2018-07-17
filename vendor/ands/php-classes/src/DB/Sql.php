@@ -1,6 +1,6 @@
 <?php 
 
-namespace Hcode\DB;
+namespace Ands\DB;
 
 class Sql {
 
