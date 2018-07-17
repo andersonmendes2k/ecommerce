@@ -1,9 +1,9 @@
 {
-    "name": "Anderson/ecommerce",
+    "name": "hcodebr/ecommerce",
     "authors": [
         {
-            "name": "Anderson Mendes",
-            "email": "andersonmendes2k@gmail.com"
+            "name": "Hcode Treinamentos",
+            "email": "suporte@hcode.com.br"
         }
     ],
     "require": {
@@ -13,7 +13,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Hcode\\": "vendor\\hcode\\php-classes\\src"
+            "Hcode\\": "vendor\\hcodebr\\php-classes\\src"
         }
     }
 }

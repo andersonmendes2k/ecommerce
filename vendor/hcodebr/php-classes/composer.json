@@ -1,13 +1,13 @@
 {
-    "name": "ands/php-classes",
+    "name": "hcodebr/php-classes",
     "minimum-stability": "dev",
     "type": "library",
     "description": "Classes PHP",
     "homepage": "https://github.com/hcodebr/php-classes",
     "authors": [
         {
-            "name": "Anderson Mendes",
-            "email": "andersonmendes2k@gmail.com"
+            "name": "Hcode Treinamentos",
+            "email": "suporte@hcode.com.br"
         }
     ],
     "require": {
