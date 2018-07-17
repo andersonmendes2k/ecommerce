@@ -1,10 +1,11 @@
 <?php 
-
+session_start();
 require_once("vendor/autoload.php");
 
 use \Slim\Slim;
 use \Ands\Page;
 use \Ands\PageAdmin;
+use \Ands\Model\User;
 
 $app = new Slim();
 
@@ -20,9 +21,38 @@ $app->get('/', function() {
 
 $app->get('/adm', function() {
 
+	User::verifyLogin();
+
 	$page = new PageAdmin();
 
 	$page->setTpl("index");
+
+});
+
+$app->get('/adm/login', function() {
+
+	$page = new PageAdmin([
+		"header"=>false,
+		"footer"=>false
+	]);
+
+	$page->setTpl("login");
+});
+
+$app->post('/adm/login', function() {
+	
+	User::login($_POST["login"], $_POST["password"]);
+
+	header("Location: /adm");
+	exit;
+
+});
+
+$app->get('/adm/logout', function(){
+
+	User::logout();
+	header("Location: /adm/login");
+	exit;
 
 });
 
