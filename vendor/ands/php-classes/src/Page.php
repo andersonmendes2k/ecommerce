@@ -38,21 +38,14 @@ class Page {
 		foreach ($data as $key => $value) {
 			$this->tpl->assign($key, $value);
 		}
-
 	}
-
 	public function setTpl($name, $data = array(), $returnHTML = false)
 	{
-
-		$this->setData();
+		$this->setData($data);
 		return $this->tpl->draw($name, $returnHTML);
-
 	}
-
 	public function __destruct(){
-
-	if ($this->options["footer"]) $this->tpl->draw("footer");
-
+		if ($this->options["footer"] === true) $this->tpl->draw("footer");
 	}
 
 
